@@ -69,6 +69,7 @@ const useModelEditor = (model: Model) => {
 
   const getModel = (): Model => {
     return {
+      ...model,
       paramValues: [...paramValues].map<ParamValue>(([paramId, value]) => {
         return { paramId, value };
       }),
